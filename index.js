@@ -30,23 +30,22 @@ function worker(faces, image, file) {
           .resize(faceWidth*1.8, faceHeight*1.8)
           .write('/tmp/helmet-resized.png', function (err) {
             if (err){
-              console.log(error)
+              console.log(err)
             } else {
-              console.log('done');
+              var offsetX = face.getX() - faceWidth*0.15;
+              var offsetY = face.getY() - faceHeight*0.5;
+              gm(file)
+              .composite('/tmp/helmet-resized.png')
+              .geometry('+'+offsetX+'+'+offsetY)
+              .write('images/composite.jpg', function(err) {
+                if(err) {
+                  console.log(err)
+                } else {
+                  console.log("Written composite image.");
+                }
+              });
             }
           });
-        var offsetX = face.getX() - faceWidth*0.15;
-        var offsetY = face.getY() - faceHeight*0.5;
-        gm(file)
-        .composite('/tmp/helmet-resized.png')
-        .geometry('+'+offsetX+'+'+offsetY)
-        .write('images/composite.jpg', function(err) {
-          if(err) {
-            console.log(err)
-          } else {
-            console.log("Written composite image.");
-          }
-        });
     });
 }
 

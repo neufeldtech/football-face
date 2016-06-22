@@ -64,9 +64,7 @@ function wrapper(fileObj, callback){
   });
 }
 
-app.get('/', function(req, res, next){
-  res.sendFile(__dirname+'/html/index.html');
-});
+app.use(express.static('html'));
 app.post('/image', upload.single('image'), function(req, res){
   if (!req.file){
     res.status(400).json({'message':'Invalid request'})

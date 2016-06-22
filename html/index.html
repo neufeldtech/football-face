@@ -2,12 +2,27 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/master.css" media="screen" charset="utf-8">
+    <title>Footballify Me</title>
   </head>
   <body>
-    <form class="" action="/image" method="post" enctype="multipart/form-data">
-      <input type="file" name="image" accept="image/*">
-      <button type="submit" name="button">SUBMIT</button>
-    </form>
+    <div id="wrapper">
+      <h1>Footballify My Face</h1>
+      <div class="before">
+        <h2 class="before">Before</h2>
+        <img src="/assets/img/before.jpg" alt="Before" title="Before" />
+      </div>
+      <div class="after">
+        <h2 class="after">After</h2>
+        <img src="/assets/img/after.jpg" alt="After" title="After" />
+      </div>
+      <div class="form-container">
+        <form class="image-upload" action="/image" method="post" enctype="multipart/form-data">
+          <input type="file" name="image" accept="image/*">
+          <button type="submit" name="button">Submit</button>
+        </form>
+      </div>
+    </div>
   </body>
 </html>

@@ -1,0 +1,47 @@
+html, body {
+  font-family: Monospace;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+#wrapper {
+  max-width: 800px;
+  min-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+div.before, div.after {
+  width: 400px;
+  float: left;
+  background-color: #C1B2C1;
+}
+div.form-container {
+  min-width: 480px;
+  max-width: 960px;
+  clear: both;
+}
+h2 {
+  margin: 5px 5px 5px 25px;
+}
+img {
+  box-shadow: 10px 15px 30px rgba(0, 15, 0, 0.8);
+  margin: 0px 0px 25px 25px;
+}
+form.image-upload button {
+  width: 394px;
+  height: 40px;
+  float: left;
+  font-family: monospace;
+  font-size: 1.35em;
+  background-color: rgba(242, 200, 20, 0.87);
+  margin: 5px 2px 5px 2px;
+}
+form.image-upload input[type='file']{
+  width: 394px;
+  height: 40px;
+  float:left;
+  font-family: monospace;
+  font-size: 1.35em;
+  background-color: rgba(242, 200, 20, 0.87);
+  margin: 5px 2px 5px 2px;
+
+}

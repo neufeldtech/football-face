@@ -13,6 +13,8 @@ div.before, div.after {
   width: 400px;
   float: left;
   background-color: #C1B2C1;
+  box-shadow: 5px 5px 13px rgba(0, 48, 0, 0.5);
+
 }
 div.form-container {
   min-width: 480px;
@@ -34,6 +36,8 @@ form.image-upload button {
   font-size: 1.35em;
   background-color: rgba(242, 200, 20, 0.87);
   margin: 5px 2px 5px 2px;
+  box-shadow: 5px 5px 13px rgba(0, 48, 0, 0.5);
+  border: 0;
 }
 form.image-upload input[type='file']{
   width: 394px;
@@ -43,5 +47,6 @@ form.image-upload input[type='file']{
   font-size: 1.35em;
   background-color: rgba(242, 200, 20, 0.87);
   margin: 5px 2px 5px 2px;
+  box-shadow: 5px 5px 13px rgba(0, 48, 0, 0.5);
 
 }

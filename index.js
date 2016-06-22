@@ -6,9 +6,8 @@ var _ = require('underscore');
 var Faced = require('faced');
 var faced = new Faced();
 var exec = require('child_process').exec
-var fs = require('fs')
-  , gm = require('gm');
-var helmetImg = 'images/helmet-large-transparent.png';
+var helmetImg = 'images/template/helmet-large-transparent-med.png';
+var outputImg = 'images/output/composite.jpg'
 
 function worker(faces, image, file) {
     if (!faces) {
@@ -33,7 +32,7 @@ function worker(faces, image, file) {
         command.push(helmetImg, '-geometry', geometry, '-composite');//push face composites onto command
         console.log('found face, added to array')
     });//end each face
-    command.push('-resize','\'768>\'','-quality','75','images/composite.jpg'); //tail end of command
+    command.push('-resize','\'768>\'','-quality','85', outputImg); //tail end of command
     exec(command.join(' '), function(err, stdout, stderr) {
       if (err) console.log(err);
     });
